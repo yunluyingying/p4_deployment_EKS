@@ -68,7 +68,14 @@ brew install kubectl
 eksctl create cluster --name simple-jwt-api
 eksctl delete cluster --name simple-jwt-api (deleted when necessary)
 ```
-5. Create an IAM Rule for this cluster
+5. Create an IAM Rule that CodeBuild can use to interact with EKS
+- set environment variable ACCOUNT_ID
+```
+ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+```
+- create a role policy
+- create a role 'UdacityFlaskDeployCBKubectlRole'
+
 6. Store a secret using AWS Parameter Store
 7. Create a CodePipeline pipeline triggered by GitHub checkins
 - Generate a GitHub access token
