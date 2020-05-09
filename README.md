@@ -66,13 +66,11 @@ brew install kubectl
 - create an EKS named simple-jwt-api
 ```
 eksctl create cluster --name simple-jwt-api
-
-
 eksctl delete cluster --name simple-jwt-api (deleted when necessary)
 ```
-
-5. Store a secret using AWS Parameter Store
-6. Create a CodePipeline pipeline triggered by GitHub checkins
-7. Create a CodeBuild stage which will build, test, and deploy your code
+5. Create an IAM Rule for this cluster
+6. Store a secret using AWS Parameter Store
+7. Create a CodePipeline pipeline triggered by GitHub checkins
+8. Create a CodeBuild stage which will build, test, and deploy your code
 
 For more detail about each of these steps, see the project lesson [here](https://classroom.udacity.com/nanodegrees/nd004/parts/1d842ebf-5b10-4749-9e5e-ef28fe98f173/modules/ac13842f-c841-4c1a-b284-b47899f4613d/lessons/becb2dac-c108-4143-8f6c-11b30413e28d/concepts/092cdb35-28f7-4145-b6e6-6278b8dd7527).
