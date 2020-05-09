@@ -2,9 +2,6 @@
 A simple app to create a JWT token.
 """
 
-#!/usr/local/bin python3.6
-
-
 import os
 import logging
 import datetime
